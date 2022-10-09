@@ -1,1 +1,200 @@
+* {
+    box-sizing: border-box; 
+}
 
+/* Tar bort margin/padding så man kan arbeta utifrån kanten på webbläsarfönster */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+
+/* Bilder begränsas till förälder*/
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: o;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+}
+
+h1 {
+
+}
+
+h2 {
+    
+}
+
+h3 {
+    
+}
+
+h4 {
+    
+}
+
+h5 {
+    
+}
+
+h6 {
+    
+}
+
+p, a, li, span {
+
+}
+
+p {
+
+}
+
+a {
+
+}
+
+a:hover {
+
+}
+
+/* Layout */
+
+.container {
+
+}
+
+.hero,
+.work,
+.projects,
+.about {
+    padding: 8rem 0;
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) [inner-start] minmax(0, 67.5rem) [inner-end] minmax(2rem, 1fr);
+
+}
+
+.hero__inner,
+.work__inner,
+.projects__inner,
+.about__inner {
+    grid-column: inner;
+
+}
+
+
+.header {
+    position: fixed;
+    background-color: #222;
+    height: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: grid;
+
+}
+
+.header__inner {
+    width: 100%;
+    max-width: 1280px; /* Gå utifrån urpsrunglig layout */
+    margin: 0 auto;
+    padding: 0 2rem; /* top right bottom left */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    min-height: 100vh;
+}
+
+.work {
+    background-color: #fffcf2;
+
+    /* TEMP */
+    min-height: 100vh;
+}
+
+.projects {
+    /* TEMP */
+    min-height: 100vh;
+}
+
+.about {
+    background-color: #fffcf2;
+
+    /* TEMP */
+    min-height: 50vh;
+}
+
+.footer {
+    min-height: 160px;
+}
+
+/* Menu */
+
+.menu__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 3rem;
+
+}
+
+/* Hero */
+
+.hero__inner {
+    display:flex;
+    align-items: center;
+}
+
+.hero__content {
+    color: #fffcf2;
+}
+
+/* Work */
+
+.work__header {
+    margin-bottom: 5rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+}
+
+.gallery__item:nth-of-type(3) /* 3de gallery item*/ {
+    grid-row: span 2;
+}
+
+.gallery__item:nth-of-type(4) {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.gallery__image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Bibehåller proportioner på bilder */
+}
+
+.gallery__item {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16">
+  <g id="Group_9" data-name="Group 9" transform="translate(-797.5 -1156.515)">
+    <path id="Line_4" data-name="Line 4" d="M20,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H20a1,1,0,0,1,1,1A1,1,0,0,1,20,1Z" transform="translate(798.5 1164.5)" fill="#b1ada1"/>
+    <path id="Line_5" data-name="Line 5" d="M7,7.985a1,1,0,0,1-.706-.292l-7-6.985a1,1,0,0,1,0-1.414,1,1,0,0,1,1.414,0l7,6.985A1,1,0,0,1,7,7.985Z" transform="translate(811.5 1157.515)" fill="#b1ada1"/>
+    <path id="Line_6" data-name="Line 6" d="M0,8.015a1,1,0,0,1-.706-.292,1,1,0,0,1,0-1.414l7-7.015a1,1,0,0,1,1.414,0,1,1,0,0,1,0,1.414l-7,7.015A1,1,0,0,1,0,8.015Z" transform="translate(811.5 1164.5)" fill="#b1ada1"/>
+  </g>
+</svg>
