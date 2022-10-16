@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box; 
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Tar bort margin/padding så man kan arbeta utifrån kanten på webbläsarfönster */
@@ -7,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #222;
+    font-family: 'fieldwork', sans-serif;
 }
 
 /* Bilder begränsas till förälder*/
@@ -26,42 +28,59 @@ h3,
 h4,
 h5,
 h6 {
+    line-height: 1.2;
+    margin: 0.5em 0;
 
 }
 
 h1 {
-
+    font-size: 4rem;
 }
 
 h2 {
+    font-size: 3rem;
     
 }
 
 h3 {
+    font-size: 2rem;
     
 }
 
 h4 {
+    font-size: 1.8rem;
     
 }
 
 h5 {
+    font-size: 1.4rem;
     
 }
 
 h6 {
+    font-size: 1rem;
     
 }
 
-p, a, li, span {
+p, a, li {
+    color: #9A9892;
+    line-height: 1.5;
+    font-size: 1.125rem;
+
+}
+
+span {
 
 }
 
 p {
+    
 
 }
 
 a {
+    text-decoration: none;
+    color: #f11448;
 
 }
 
@@ -70,7 +89,14 @@ a:hover {
 }
 
 a.arrow-link {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
+a.arrow-link svg {
+    transform: translateY(-0.15rem); /* Minus pga pil längre ned på Y-axel än i video*/
 }
 
 a.arrow-link--white path{ /* Använder path ist för line */
@@ -161,20 +187,14 @@ a.arrow-link--white path{ /* Använder path ist för line */
 .work {
     background-color: #fffcf2;
 
-    /* TEMP */
-    min-height: 100vh;
 }
 
 .projects {
-    /* TEMP */
-    min-height: 100vh;
+
 }
 
 .about {
     background-color: #fffcf2;
-
-    /* TEMP */
-    min-height: 50vh;
 }
 
 .footer {
@@ -188,8 +208,26 @@ a.arrow-link--white path{ /* Använder path ist för line */
     margin: 0;
     padding: 0;
     list-style: none;
+    align-items: center;
     gap: 3rem;
 
+}
+
+.menu__link {
+    color: #fffcf2;
+}
+
+.menu__item--current {
+    font-weight: 700;
+}
+
+.menu__item--button .menu__link {
+    background-color: #fffcf2;
+    color: #222;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.4rem; /* 0.6rem gör så att texten hamnar för långt upp */
+    display: block;
 }
 
 /* Hero */
@@ -203,10 +241,42 @@ a.arrow-link--white path{ /* Använder path ist för line */
     color: #fffcf2;
 }
 
+.hero__title {
+    font-size: 10.25rem;
+    margin: 0; /* Texten får padding undertill endå?*/
+    line-height: 0px;
+    padding-bottom: 4rem;
+}
+
+.hero__title span {
+    color: #f11448;
+}
+
+.hero__description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #9A9892; 
+    margin: -0.2rem 0 0 0.4rem;
+}
+
+.hero__description span {
+    color: #fffcf2;
+}
+
 /* Work */
 
 .work__header {
     margin-bottom: 5rem;
+    max-width: 40rem;
+}
+
+.work__title {
+    margin-top: 0;
+}
+
+.work__text {
+    font-size: 1.5rem;
+    line-height: 1.66;
 }
 
 .gallery {
@@ -250,12 +320,14 @@ a.arrow-link--white path{ /* Använder path ist för line */
 .projects__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
+    gap: 5rem 3rem;
 
 }
 
 .projects__title {
     color: #fffcf2;
+    font-weight: 400;
+    margin-top: 0;
 }
 
 /* Project */
@@ -281,6 +353,7 @@ a.arrow-link--white path{ /* Använder path ist för line */
 .project__details {
     position: relative;
     order: 1;
+    margin-bottom: 2.4rem; 
 }
 
 .project__content {
@@ -293,17 +366,25 @@ a.arrow-link--white path{ /* Använder path ist för line */
 
 .project__title {
     color: #fffcf2;
+
 }
 
 .project__content p {
     color: #9A9892;
+    line-height: 1.33;
 }
 
 .project__meta {
     background-color: #fffcf2;
     position: absolute;
-    bottom: 20px;
-    left: -20px;
+    padding: 0.5rem 1rem 0.6rem;
+    font-weight: 700;
+    bottom: 16px;
+    left: -16px;
+}
+
+.project__permalink {
+    font-weight: 700;
 }
 
 /* About */
@@ -316,6 +397,16 @@ a.arrow-link--white path{ /* Använder path ist för line */
 
 .about__content {
     max-width: 38.75rem;
+}
+
+.about__title {
+    margin-top: 0;
+}
+
+.about__text {
+    font-size: 1.5rem;
+    line-height: 1.66;
+
 }
 
 /* Footer */
